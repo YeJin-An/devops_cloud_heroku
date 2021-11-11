@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>HTML 시작하기</title>
+    <style>
+        /* conntent */
+        body {
+            background-color: lightblue;
+        }
+
+        h1 {
+            font-weight: bold;
+            color: steelblue;
+            border-bottom: 3px dashed steelblue;
+        }
+
+        /* 커서를 이용하면 색깔이 바뀐다. */
+        h1:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+
+
+        #top_nav li {
+            display: inline-block;
+        }
+
+        #top_nav li a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        #top_nav li a:hover {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<!-- comment -->
+
+<body>
+    <nav>
+        <ul id="top_nav">
+            <li>
+                <a href="/">처음으로</a>
+            </li>
+            <li> <a href="/profile">프로필</a></li>
+            <li> <a href="/posts">블로그</a></li>
+            <li> <a href="https://github.com/YeJin-An">깃허브</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <img src="/static/panda.jpg"
+            style="margin:0 auto; display: block; width: 200px; height: 150px; border-radius:10px; box-shadow: 10px 5px 5px #333333;" />
+    </div>
+
+    <!-- inji2 의 문법이다. -->
+    {% block body %}
+    {% endblock %}
+
+    <hr />
+    &copy; 2021. 안예진 컴퍼니,
+
+</body>
+
+</html>
